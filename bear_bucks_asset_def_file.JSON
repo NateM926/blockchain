@@ -1,0 +1,17 @@
+{
+      "asset_ids": [
+        "<base 58 asset id>"
+      ],
+      "name_short": "BEARBUX",
+      "name": "Bear Bux",
+      "contract_url": "<url>",
+      "issuer": "<string>",
+      "description": "<string>",
+      "description_mime": "<mime type>",
+      "type": "<string>",
+      "divisibility": <integer>,
+      "link_to_website": <boolean>,
+      "icon_url": "<url>",
+      "image_url": "<url>",
+      "version": "0.0"
+}  
