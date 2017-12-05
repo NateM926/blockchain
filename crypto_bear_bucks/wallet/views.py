@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from wallet.serializers import UserSerializer, GroupSerializer
-from django_cc.cc.models import Wallet, Currency
+# from cc.models import Wallet, Currency
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")

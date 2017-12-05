@@ -3,7 +3,6 @@ from django.contrib import admin
 from . import models
 from .forms import WalletAdminForm
 
-
 class WalletAdmin(admin.ModelAdmin):
     form = WalletAdminForm
     list_display = ('id', 'currency', 'balance', 'holded', 'unconfirmed', 'label', 'get_address')

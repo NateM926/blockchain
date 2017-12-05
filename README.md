@@ -1,18 +1,21 @@
-# Crypto Bear Bucks - on the Blockchain
-#### OS
+# Crypto Bear Bucks on the Blockchain
+### OS
 Ubuntu 16.04 LTS
 
-#### Python 3
-python3 and pip3
+### Versions
+* python3 (3.5.2)
+* pip3 (8.1.1)
+* django (2.0.0)
 
-#### Open Assets Protocol
+### Running bitcoin core server with RPC and testnet.
+`bitcoind --txindex=1 --server=1 --testnet` (possibly need --reindex)
 
-#### Django-CC
+### Running Django
+`python3 manage.py migrate --run-syncdb`
 
-#### Running bitcoin core server with RPC and testnet.
-`bitcoind --txindex=1 --server=1 --testnet`
-(possibly need --reindex)
-
-#### Running Django
-`python3 manage.py migrate`
 `python3 manage.py runserver` 
+
+### Open Assets Protocol
+
+### Django-CC
+`celery -A django_cc.cc.tasks worker -l info`

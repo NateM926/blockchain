@@ -10,10 +10,10 @@ from bitcoinrpc.authproxy import AuthServiceProxy
 
 from django.db import transaction
 
-from .models import (Wallet, Currency, Transaction, Address,
+from models import (Wallet, Currency, Transaction, Address,
                        WithdrawTransaction, Operation)
-from . import settings
-from .signals import post_deposite
+import settings
+from signals import post_deposite
 
 logger = get_task_logger(__name__)
 

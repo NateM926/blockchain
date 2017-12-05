@@ -18,14 +18,22 @@ from django.urls import include, path
 from django.contrib import admin
 from rest_framework import routers
 from wallet import views
+from cc import urls
 
+# api routing
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+
+# Vanity headers / titles for admin page
+admin.site.site_header = 'Crypto Bear Bucks Admin'
+admin.site.site_title = 'My site admin'
+admin.site.index_title = 'Site administration'
 
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^wallet/', include('wallet.urls')),
+    url(r'^cc/', include('cc.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
