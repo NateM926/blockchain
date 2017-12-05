@@ -6,6 +6,7 @@ Ubuntu 16.04 LTS
 * python3 (3.5.2)
 * pip3 (8.1.1)
 * django (2.0.0)
+* celery (4.1.0)
 
 ### Running bitcoin core server with RPC and testnet.
 `bitcoind --txindex=1 --server=1 --testnet` (possibly need --reindex)

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'cc',
+    'openassets',
 ]
 
 REST_FRAMEWORK = {
