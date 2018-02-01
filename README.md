@@ -20,3 +20,7 @@ Ubuntu 16.04 LTS
 
 ### Django-CC
 `celery -A django_cc.cc.tasks worker -l info`
+
+`celery worker -A crypto_bear_bucks`
+
+### REDIS

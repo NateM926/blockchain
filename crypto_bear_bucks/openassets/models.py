@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 # create asset def url with json for open assets using this model
 class Asset_Definition_File(models.Model):
