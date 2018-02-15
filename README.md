@@ -23,4 +23,15 @@ Ubuntu 16.04 LTS
 
 `celery worker -A crypto_bear_bucks`
 
-### REDIS
+`celery call cc.tasks.refill_addresses_queue`
+
+`call celery_tasks.tasks.add --args='[1,2]'`
+
+### TODO
+1. get some task to successfully run.
+2. Make sure cc is imported successfully in celery
+3. run cc task
+
+
+### SOMEDAY
+clean up cc? Make it into a single app? Commit before ofc.

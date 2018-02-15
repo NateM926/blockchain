@@ -1,10 +1,13 @@
 from __future__ import absolute_import, unicode_literals
 
 import os
+import django
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crypto_bear_bucks.crypto_bear_bucks.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crypto_bear_bucks.settings')
+
+django.setup()
 
 app = Celery('crypto_bear_bucks')
 
@@ -15,4 +18,4 @@ app = Celery('crypto_bear_bucks')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Load task modules from all registered Django app configs.
-app.autodiscover_tasks()
+app.autodiscover_tasks(force=True)
