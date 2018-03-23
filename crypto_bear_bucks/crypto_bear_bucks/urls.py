@@ -28,12 +28,12 @@ router.register(r'wallet', views.CCWalletViewSet)
 
 
 # Vanity headers / titles for admin page
-admin.site.site_header = 'College Cryptocurrency Administration Page'
+admin.site.site_header = 'Bear Bucks on the Blockchain'
 # admin.site.site_title = 'My site admin'
 # admin.site.index_title = 'Site administration'
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^openassets/', include('openassets.urls')),
     url(r'^cc/', include('cc.urls')),

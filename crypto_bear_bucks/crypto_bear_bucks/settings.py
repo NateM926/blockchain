@@ -39,10 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_celery_results',
 
-    # 'celery_tasks',
     'rest_framework',
     'cc',
-    'openassets',
 ]
 
 REST_FRAMEWORK = {
