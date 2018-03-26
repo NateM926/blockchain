@@ -2,7 +2,6 @@ from __future__ import absolute_import
 
 from django.http import HttpResponse, HttpResponseForbidden, HttpResponseBadRequest
 from django.http.request import validate_host, split_domain_port
-
 from . import settings
 from .models import Currency
 from .tasks import query_transactions, query_transaction

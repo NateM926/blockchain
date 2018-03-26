@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.urls import include, path
 from django.contrib import admin
 from rest_framework import routers
-from openassets import views
+from . import views
 from cc import urls
 
 # api routing
@@ -35,7 +35,7 @@ admin.site.site_header = 'Bear Bucks on the Blockchain'
 urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
-    url(r'^openassets/', include('openassets.urls')),
+    # url(r'^openassets/', include('openassets.urls')),
     url(r'^cc/', include('cc.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
